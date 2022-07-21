@@ -27,16 +27,15 @@ void printArray(int[,] array)
 
 void average (int [,] array)
 {
-    double result = 0;
     Console.Write("Среднее арифметическое каждого столбца: ");
     for (int i = 0; i < array.GetLength(1); i++)
     {
+        double result = 0;
         for (int j = 0; j < array.GetLength(0); j++)
         {
             result = result + array [j,i];            
         }
         Console.Write(result / array.GetLength(0) + "; ");
-        result = 0;
     }
 }
 
